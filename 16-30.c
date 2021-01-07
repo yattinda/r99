@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 //16
 int power(int n, int m){
    int i = 0, sum = 1;
@@ -121,6 +124,39 @@ int sum_of_divisors(int n) {
   }
   return sum;
 }
+//30
+
+// まず入力値が１のときは０を返す
+// それ以外のときはtmpで2からｎまでそれぞれの約数の総数を保存しtmp==2のとき素数であるためansに１加える
+int primes(int n){
+  int ans = 0;
+  if (n == 1) {
+    ans = 0;
+  } else {
+    int i;
+    for(i=2; i<n; i++){
+      int tmp = 0, j = 0;
+      for (j=1; j<=i; j++){
+        if(i % j == 0){
+          tmp++;
+        }
+      }
+      if (tmp == 2) {
+        ans++;
+      }
+      tmp = 0;
+    }
+    return ans;
+  }
+}
+
+int main(void) {
+  int p;
+  scanf("%i", &p);
+  printf("%i\n", primes(p));
+  return 0;
+}
+
 int main(void) {
     // 定義した関数の呼び出しをここに。
     return 0;

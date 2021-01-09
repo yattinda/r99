@@ -150,12 +150,12 @@ int primes(int n){
   }
 }
 
-int main(void) {
-  int p;
-  scanf("%i", &p);
-  printf("%i\n", primes(p));
-  return 0;
-}
+// int main(void) {
+//   int p;
+//   scanf("%i", &p);
+//   printf("%i\n", primes(p));
+//   return 0;
+// }
 
 int main(void) {
     // 定義した関数の呼び出しをここに。

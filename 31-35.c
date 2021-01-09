@@ -20,12 +20,12 @@ int most_divisors(int n) {
   return ans;
 }
 
-int main(void){
-  int p;
-  scanf("%i", &p);
-  printf("%i\n", most_divisors(p));
-  return 0;
-}
+// int main(void){
+//   int p;
+//   scanf("%i", &p);
+//   printf("%i\n", most_divisors(p));
+//   return 0;
+// }
 
 //32
 //i*i<nとし、総計算量を半分にした
@@ -39,12 +39,12 @@ int is_prime(int n) {
   return 1;
 }
 
-int main(void){
-  int p;
-  scanf("%i", &p);
-  printf("%i\n", is_prime(p));
-  return 0;
-}
+// int main(void){
+//   int p;
+//   scanf("%i", &p);
+//   printf("%i\n", is_prime(p));
+//   return 0;
+// }
 
 //33
 // i*iとｎの比較
@@ -58,12 +58,12 @@ int is_square(int n){
    return 0;
  }
 
- int main(void){
-   int p;
-   scanf("%i", &p);
-   printf("%i\n", is_square(p));
-   return 0;
- }
+ // int main(void){
+ //   int p;
+ //   scanf("%i", &p);
+ //   printf("%i\n", is_square(p));
+ //   return 0;
+ // }
 
  //34
 // i*i*iとｎの比較
@@ -77,12 +77,12 @@ int is_square(int n){
    return 0;
  }
 
- int main(void){
-   int p;
-   scanf("%i", &p);
-   printf("%i\n", is_cubic(p));
-   return 0;
- }
+ // int main(void){
+ //   int p;
+ //   scanf("%i", &p);
+ //   printf("%i\n", is_cubic(p));
+ //   return 0;
+ // }
 
 //35
 //33を用いてｎから二乗したものを引いたものをis_squareで判定する
@@ -96,9 +96,9 @@ int is_squeare_sum(int n){
   return 0;
 }
 
-int main(void){
-  int p;
-  scanf("%i", &p);
-  printf("%i\n", is_squeare_sum(p));
-  return 0;
-}
+// int main(void){
+//   int p;
+//   scanf("%i", &p);
+//   printf("%i\n", is_squeare_sum(p));
+//   return 0;
+// }

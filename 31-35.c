@@ -31,8 +31,8 @@ int most_divisors(int n) {
 //i*i<nとし、総計算量を半分にした
 int is_prime(int n) {
   int i;
-  for(i=2; i*i<n; i++){
-    if (n % i == 0){
+  for (i=2; i*i<n; i++) {
+    if (n % i == 0) {
       return 0;
     }
   }
@@ -48,10 +48,10 @@ int is_prime(int n) {
 
 //33
 // i*iとｎの比較
-int is_square(int n){
+int is_square (int n) {
    int i;
-   for(i=1; i*i <= n; i++){
-     if (i*i == n){
+   for (i=1; i*i <= n; i++) {
+     if (i*i == n) {
        return 1;
      }
    }
@@ -67,10 +67,10 @@ int is_square(int n){
 
  //34
 // i*i*iとｎの比較
- int is_cubic(int n){
+ int is_cubic (int n) {
    int i;
-   for(i=1; i*i*i <= n; i++){
-     if (i*i*i == n){
+   for (i=1; i*i*i <= n; i++) {
+     if (i*i*i == n) {
        return 1;
      }
    }
@@ -88,8 +88,8 @@ int is_square(int n){
 //33を用いてｎから二乗したものを引いたものをis_squareで判定する
 int is_squeare_sum(int n){
   int i;
-  for(i=1; i*i<= n; i++){
-    if (is_square(n - (i * i))){
+  for (i=1; i*i<= n; i++) {
+    if (is_square(n - (i * i))) {
       return 1;
     }
   }

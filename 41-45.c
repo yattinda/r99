@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 //41
+//配列にその月の総日数を入れ、その月になるまでそれぞれ足した
 int days(int mm, int dd) {
   int ans = 0, i;
   int monthDay[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

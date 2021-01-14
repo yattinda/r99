@@ -86,11 +86,11 @@ int time_to_int(int h, int m, int s) {
 }
 
 int sec_between(int h1, int m1, int s1, int h2, int m2, int s2){
-  int tmp1, tmp2;
+  int tmp1, tmp2, ans;
   tmp1 = time_to_int(h1, m1, s1);
   tmp2 = time_to_int(h2, m2, s2);
 
-  ans = tmp1 - tmp2
+  ans = tmp1 - tmp2;
   if (ans < 0) {
     ans = -ans;
   }

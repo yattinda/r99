@@ -36,6 +36,10 @@ int main(void) {
 
 //53
 //m - n + 1以下の乱数をｎに足した
+int my_rand(int n) {
+  return (int)(random() % n);
+}
+
 int rand_int(int n, int m) {
   return my_rand(m - n + 1) + n;
 }

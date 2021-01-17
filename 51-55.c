@@ -96,8 +96,7 @@ float pi(int n) {
       count++;
     }
   }
-  float tmp = (float) count / 1000;
-  return tmp * 4;
+  return (float) (count * 4) / 1000;
 }
 
 int main(void) {

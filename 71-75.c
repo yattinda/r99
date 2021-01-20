@@ -78,7 +78,7 @@ void init_randoms_99(int a[] , int n) {
   }
   for (i = 0; i < n; i++) {
     printf("%i", a[i]);
-}
+  }
 }
 
 int main(void) {

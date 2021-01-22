@@ -35,3 +35,21 @@ int main(void) {
   printf("%s %i \n", s, str_len(s));
   return 0;
 }
+
+//80
+int count_chars(char* s, char c){
+  int total, tmp;
+  for(tmp=0; s[tmp]!='\0'; tmp++) {
+    if (s[tmp] == c) {
+      total++;
+    }
+  }
+   return total;
+ }
+
+ int main(void) {
+   char s[50] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+   char c[5]  = "A";
+   printf("%i\n", count_chars(s, c[0]));
+   return 0;
+ }

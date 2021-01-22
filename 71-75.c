@@ -46,8 +46,8 @@ int fibo(int n) {
 
 int fibo_over(n) {
   int i;
-  for (i=0;;i++){
-    if (fibo(i)>n){
+  for (i=0; ; i++){
+    if (fibo(i) > n){
       return i;
     }
   }

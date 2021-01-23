@@ -11,16 +11,16 @@ int str_eql(char* s1, char* s2){
       total++;
     }
   }
-  if (s2[tmp] == '\0' && total == tmp) {
+  if (s2[total] == '\0') {
    return 1;
- } else{
+ } else {
    return 0;
  }
 }
 
  int main(void) {
-   char s1[50] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-   char c2[50] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-   printf("%i\n", str_eql(s[50], c[50]));
+   char s1[50] = "AAACCC";
+   char s2[50] = "AAACCC";
+   printf("%i\n", str_eql(s1, s2));
    return 0;
  }

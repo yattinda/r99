@@ -22,6 +22,7 @@ int main(void) {
 }
 
 //79
+//forで文字配列を'\0'が出るまでカウント
 int str_len(char* s) {
   int total;
   for(total=0; s[total]!='\0'; total++) {
@@ -37,6 +38,7 @@ int main(void) {
 }
 
 //80
+//forで一致した回数をカウント
 int count_chars(char* s, char c){
   int total, tmp;
   for(tmp=0; s[tmp]!='\0'; tmp++) {

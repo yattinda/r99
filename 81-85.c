@@ -53,19 +53,20 @@ int str_eql(char* s1, char* s2){
 
  //83
  //どちらかが'\0'になるまで文字配列の中身を移す
-void str_copy(char* s1, char* s2){
-  int i;
-  for (i=0; s1[i]!='\0'||s2[i]!='\0'; i++) {
-    s2[i] = s1[i];
-  }
-}
+ void str_copy(char* s1, char* s2){
+   int i;
+   for (i=0; s1[i]!='\0'||s2[i]!='\0'; i++) {
+     s2[i] = s1[i];
+   }
+ }
 
-int main(void) {
-  char s1[50] = "AAACCC";
-  char s2[50] = "AAACCC";
-  printf("%i\n", str_copy(s1, s2));
-  return 0;
-}
+ int main(void) {
+   char s1[50] = "AAACCC";
+   char s2[50] = "BB";
+   str_copy(s1, s2);
+   printf("%s\n", s2);
+   return 0;
+ }
 
 //84
 //s1の文字数をカウントし、その数からs2が'\0'になるまで文字配列の中身を移す

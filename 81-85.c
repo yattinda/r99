@@ -4,6 +4,7 @@
 #include <math.h>
 
 //81
+//一致した数をカウントしカウントした数を文字配列に渡し文字列の最後が’\0’かどうかで条件分岐
 int str_eql(char* s1, char* s2){
   int total, tmp;
   for(tmp=0; s1[tmp]!='\0'; tmp++) {
@@ -11,7 +12,7 @@ int str_eql(char* s1, char* s2){
       total++;
     }
   }
-  if (s1[total] == '\0' && s2[total] == 0) {
+  if (s1[total] == '\0' && s2[total] == '\0') {
    return 1;
  } else {
    return 0;
@@ -26,9 +27,10 @@ int str_eql(char* s1, char* s2){
  }
 
  //82
+ //81を改変し一致した数とｎを比較する
  int str_eql_n(char* s1, char* s2, int n){
    int total, tmp;
-   for(tmp=0; tmp=n ; tmp++) {
+   for(tmp=0; tmp=n; tmp++) {
      if (s1[tmp] == s2[tmp]) {
        total++;
      }
@@ -50,6 +52,7 @@ int str_eql(char* s1, char* s2){
  }
 
  //83
+ //どちらかが'\0'になるまで文字配列の中身を移す
 void str_copy(char* s1, char* s2){
   int i;
   for (i=0; s1[i]!='\0'||s2[i]!='\0'; i++) {
@@ -65,6 +68,7 @@ int main(void) {
 }
 
 //84
+//s1の文字数をカウントし、その数からs2が'\0'になるまで文字配列の中身を移す
 char* str_append(char* s1, char* s2){
   int i, count;
   for (count=0; s1[count]!='\0'; count++) {
@@ -84,6 +88,7 @@ int main(void) {
 }
 
 //85
+//はじめにnを変数に渡し、s１のn文字目からm文字までをs２に移した。最後に'\0'を渡した
 char* str_take(char* s1, int n, int m, char* s2){
   int start = n;
   for (; n<=m; n++) {

@@ -84,15 +84,17 @@ int main(void) {
 }
 
 //85
-char* str_take(char* s1, int n, int m, int char* s2){
-  for (; n<m; i++) {
-    s2[i - n] = s1[i];
+char* str_take(char* s1, int n, int m, char* s2){
+  int start = n;
+  for (; n<=m; n++) {
+    s2[n - start] = s1[n];
   }
+  s2[m]  ='\0';
   return s2;
 }
 
 int main(void) {
-  char s2[50];
-  printf("%s\n", str_take("0123456", 1, 3, s2);
+  char s2[10000];
+  printf("%s\n", str_take("0123456", 1, 3, s2));
   return 0;
 }

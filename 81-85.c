@@ -63,3 +63,36 @@ int main(void) {
   printf("%i\n", str_copy(s1, s2));
   return 0;
 }
+
+//84
+char* str_append(char* s1, char* s2){
+  int i, count;
+  for (count=0; s1[count]!='\0'; count++) {
+    ;
+  }
+  for (i=0; s2[i]!='\0'; i++) {
+    s1[count + i] = s2[i];
+  }
+  return s1;
+}
+
+int main(void) {
+  char s1[50] = "AAACCC";
+  char s2[50] = "PAPA";
+  printf("%s\n", str_append(s1, s2));
+  return 0;
+}
+
+//85
+char* str_take(char* s1, int n, int m, int char* s2){
+  for (; n<m; i++) {
+    s2[i - n] = s1[i];
+  }
+  return s2;
+}
+
+int main(void) {
+  char s2[50];
+  printf("%s\n", str_take("0123456", 1, 3, s2);
+  return 0;
+}

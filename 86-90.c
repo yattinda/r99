@@ -33,6 +33,7 @@ int main(void){
 
 
 //87
+//まず文字数を数え、取り除く部分にそれぞれ新しい文字を加え、最後に'/0'をおいた
 char* str_remove(char* s1, int n, int m) {
   int i, count;
   for (count=0; s1[count]!='\0'; count++) {

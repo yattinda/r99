@@ -40,3 +40,27 @@ int main(void) {
   printf("%i\n", lines());
   return 0;
 }
+
+//58
+int nth(int n){
+  FILE* fp;
+
+  int i, num;
+
+  fp = fopen("numbers.txt", "r");
+
+  for(i=0; i<n; i++){
+    if(fscanf(fp, "%i", &num) != EOF){
+      ;
+    }
+  }
+  return num;
+  fclose(fp);
+}
+
+int main(void) {
+  int p;
+  scanf("%i", &p);
+  printf("%i\n", nth(p));
+  return 0;
+}

@@ -71,20 +71,84 @@ int main(void) {
 }
 
 //73
+//my_randを用いて100までの乱数を生成しそれぞれ配列に加えた
+int my_rand(int n) {
+  return (int)(random() % n);
+}
+
 void init_randoms_99(int a[] , int n) {
   int i;
   for (i=0; i<n; i++){
-    a[i] = rand() % 100;
-  }
-  for (i = 0; i < n; i++) {
-    printf("%i", a[i]);
+    a[i] = my_rand(100);
   }
 }
 
 int main(void) {
   srandom(getpid( ));//voidらしい
-  int p;
-  scanf("%i", &p);
-  init_randoms_99(p);
+  int list[5];
+  init_randoms_99(list, 5);
+  int i = 0;
+  for(i=0; i<5; i++){
+    printf("%i\n", list[i]);
+  }
   return 0;
+}
+
+//74
+//100までの数字それぞれに対して配列内の数字全てと比較しカウントする.カウントが0か否かで場合分け
+int my_rand(int n) {
+  return (int)(random() % n);
+}
+
+void init_randoms_99(int a[] , int n) {
+  int i;
+  for (i=0; i<n; i++){
+    a[i] = my_rand(100);
+  }
+}
+
+void find_not(int a[], int n){
+  int i, j;
+  int find_count = 0;
+  for(i=0; i<100; i++){
+    for(j=0; j<n; j++){
+      if(a[j] == i){
+        find_count++;
+      }
+    }
+    if(find_count == 0){
+      printf("%i\n", i);
+    } else {
+      find_count  = 0;
+    }
+  }
+}
+
+int main(void){
+  srandom(getpid( ));//voidらしい
+  int a[100];
+  init_randoms_99(a, 100);
+  find_not(a, 100);
+}
+
+//75
+void find_not(int_a[], int n){
+  int i, j;
+  int find_count = 0, biggest == 0, ans = 0;
+  for(i=0; i<100; i++){
+    for(j=0; j<n; j++){
+      if(a[j] == i){
+        find_count++ ;
+      }
+    }
+    if(find_count > biggest){
+      biggest == find_count;
+      ans = i
+      find_count  = 0;
+    }
+  }
+}
+
+int main(void){
+  find_not(list, 10)
 }

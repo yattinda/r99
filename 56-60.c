@@ -42,6 +42,7 @@ int main(void) {
 }
 
 //58
+// fscanfで1１行づつ読み取り、n行目をかえした
 int nth(int n){
   FILE* fp;
 

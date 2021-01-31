@@ -2,6 +2,70 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <math.h>
+//61
+
+// Why CAN'T work???
+// int sum_tail(int n){
+//   FILE* fp;
+//   int count;
+//   char c_num[100];
+//   int i, num, sum;
+//
+//   fp = fopen("numbers.txt", "r");
+//   for (count=0; fgets(c_num, 100, fp); ) {
+//     count++;
+//   }
+//   for(i=0; i<count; i++){
+//     if(fscanf(fp, "%i", &num) != EOF){
+//       if(count - i < n){
+//         sum += num;
+//       }
+//     }
+//   }
+//   return sum;
+//   fclose(fp);
+// }
+
+int lines(void) {
+  FILE* fp;
+  int count;
+  char c_num[100];
+
+  fp = fopen("numbers.txt", "r");
+  for (count=0; fgets(c_num, 100, fp); ) {
+    count++;
+  }
+  fclose(fp);
+
+  return count;
+}
+
+int sum_tail(int n){
+  FILE* fp;
+
+  int i, num, sum;
+  int count = lines();
+  fp = fopen("numbers.txt", "r");
+
+  for(i=0; i<count; i++){
+    if(fscanf(fp, "%i", &num) != EOF){
+      if(count - i <= n){
+        sum += num;
+      }
+    }
+  }
+  return sum;
+  fclose(fp);
+}
+
+int main(void) {
+  int p;
+  scanf("%i", &p);
+  printf("%i\n", sum_tail(p));
+  return 0;
+}
+
+//62
 
 //64
 //ｎの偶奇を整形し、forで２ずつ足した

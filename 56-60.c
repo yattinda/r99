@@ -65,3 +65,51 @@ int main(void) {
   printf("%i\n", nth(p));
   return 0;
 }
+
+//59
+//10回足した総和を返す 162399
+int sum10(void){
+  FILE* fp;
+
+  int i, num, sum;
+
+  fp = fopen("numbers.txt", "r");
+
+  for(i=0; i<10; i++){
+    if(fscanf(fp, "%i", &num) != EOF){
+      sum += num;
+    }
+  }
+  return sum;
+  fclose(fp);
+}
+
+int main(void) {
+  printf("%i\n", nth());
+  return 0;
+}
+
+//60
+//59番の10を引数nとした
+int sum_n(int n){
+  FILE* fp;
+
+  int i, num, sum;
+
+  fp = fopen("numbers.txt", "r");
+
+  for(i=0; i<n; i++){
+    if(fscanf(fp, "%i", &num) != EOF){
+      sum += num;
+    }
+  }
+  return sum;
+  fclose(fp);
+}
+
+int main(void) {
+  int p;
+  scanf("%i", &p);
+  printf("%i\n", sum_n(p));
+  return 0;
+}

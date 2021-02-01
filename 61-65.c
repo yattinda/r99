@@ -26,6 +26,7 @@
 //   fclose(fp);
 // }
 
+//総行数を数えfscanfで最後のn行のみ足した
 int lines(void) {
   FILE* fp;
   int count;
@@ -66,7 +67,37 @@ int main(void) {
 }
 
 //62
+//NULLが帰ってくるまでfgetsで1行づつprintした
+void cat(char* fname){
+  FILE* fp;
+  char tmp[100];
 
+  fp = fopen(fname, "r");
+
+  for(;fgets(tmp, 100, fp) != NULL;){
+    printf("%s", tmp);
+  }
+}
+
+int main(void){
+  cat("numbers.txt");
+}
+
+//63
+void cat(char* fname){
+  FILE* fp;
+  char tmp[100];
+  int linenum;
+  fp = fopen(fname, "r");
+
+  for(linenum = 0; fgets(tmp, 100, fp) != NULL; linenum++){
+    printf("%i %s", linenum, tmp);
+  }
+}
+
+int main(void){
+  cat("numbers.txt");
+}
 //64
 //ｎの偶奇を整形し、forで２ずつ足した
 int sum_odds(int n, int m) {

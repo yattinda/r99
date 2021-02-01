@@ -84,6 +84,7 @@ int main(void){
 }
 
 //63
+//62に行番号をつけてprintした
 void cat(char* fname){
   FILE* fp;
   char tmp[100];
@@ -91,7 +92,7 @@ void cat(char* fname){
   fp = fopen(fname, "r");
 
   for(linenum = 0; fgets(tmp, 100, fp) != NULL; linenum++){
-    printf("%i %s", linenum, tmp);
+    printf("%i: %s", linenum, tmp);
   }
 }
 
@@ -119,6 +120,7 @@ int main(void) {
 }
 
 //65
+//forで次の完全数がでるまでstatusで状態管理し、1のときにi-1を返した
 int is_perfect(int n) {
   int sum = 0, i;
   for (i=1; i<n; i++) {
@@ -131,4 +133,21 @@ int is_perfect(int n) {
   } else {
     return 0;
   }
+}
+
+int next_perfect(int n){
+  int i, status = 0 ;
+  for (i=n+1 ;status != 1; i++){
+    if (is_perfect(i) == 1){
+      status = 1;
+    }
+  }
+  return i - 1;
+}
+
+int main(void){
+  int n = 0;
+  scanf("%i", &n);
+  printf("%i\n", next_perfect(n));
+  return 0;
 }

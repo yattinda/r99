@@ -132,23 +132,41 @@ int main(void){
 }
 
 //75
-void find_not(int_a[], int n){
+/*配列の要素それぞれにその要素数以降の数を比較し、一致した回数をカウントした
+  その後カウントとそれまでに最も大きかったカウントを比較し、最終的に最も大きいものをprintした
+*/
+int my_rand(int n) {
+  return (int)(random() % n);
+}
+
+void init_randoms_99(int a[] , int n) {
+  int i;
+  for (i=0; i<n; i++){
+    a[i] = my_rand(100);
+  }
+}
+
+void find_max_dupli(int a[], int n){
   int i, j;
-  int find_count = 0, biggest == 0, ans = 0;
-  for(i=0; i<100; i++){
-    for(j=0; j<n; j++){
-      if(a[j] == i){
+  int find_count = 0, biggest = 0, ans = 0;
+  for(i=0; i<n-1; i++){
+    for(j=i; j<n; j++){
+      if(a[j] == a[i]){
         find_count++ ;
       }
     }
     if(find_count > biggest){
-      biggest == find_count;
-      ans = i
+      biggest = find_count;
+      ans = a[i];
       find_count  = 0;
     }
   }
+  printf("%i\n",ans);
 }
 
 int main(void){
-  find_not(list, 10)
+  srandom(getpid( ));//voidらしい
+  int a[100];
+  init_randoms_99(a, 100);
+  find_max_dupli(a, 100);
 }

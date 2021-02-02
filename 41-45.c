@@ -38,6 +38,7 @@ int days_between(int y1, int m1, int d1, int y2, int m2, int m2){
     totalday += 365 + leap(i)
   }
 }
+
 //42
 /*年が同じ場合、単純に日数を比較した。年が違う場合、y1とy2を含まないすべての年をうるう年を
 含めて算出し最後にうるう年を調節した
@@ -88,6 +89,7 @@ int days_between(int y1, int m1, int d1, int y2, int m2, int d2) {
 int main(void){
   printf("%i\n", days_between(2020, 4, 12, 2021, 2, 3));
 }
+
 //44
 //1の位と100の位の数をそれぞれ変数に代入し計算し直した
 int rev3(int n) {

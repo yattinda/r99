@@ -84,7 +84,7 @@ char* str_remove(char* s1, int n, int m) {
   s1[i + m]  = '\0';
   return s1;
 }
-//一致する文字列があればstr_removeでそれぞれ引いた
+//一致する文字列があればstr_removeで引いた
 char* str_remove_str(char s1[ ], char s2[ ]){
   int search_num = str_search(s1, s2);
   int s2_len = str_len(s2);

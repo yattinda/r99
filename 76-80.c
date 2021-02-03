@@ -78,7 +78,7 @@ int main(void) {
 int str_len(char* s) {
   int total;
   for(total=0; s[total]!='\0'; total++) {
-    total++;
+    ;
   }
   return total;
 }

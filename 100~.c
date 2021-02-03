@@ -140,6 +140,16 @@ double integrate(double from, double to, double dx) {
   }
   return sum;
 }
+//台形積分
+// double integrate(double from, double to, double dx) {
+//   double sum = 0.0;
+//   double x;
+//
+//   for (x = from; x < to; x += dx) {
+//     sum += ((f(x) + f(x - 1))/2)*dx;
+//   }
+//   return sum;
+// }
 
 // ./a.out 0 1 1000 のように呼び出せるように。
 int main(int argc, char *argv[]) {

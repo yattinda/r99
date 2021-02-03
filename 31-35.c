@@ -31,7 +31,7 @@ int most_divisors(int n) {
 //i*i<nとし、総計算量を半分にした
 int is_prime(int n) {
   int i;
-  for (i=2; i*i<n; i++) {
+  for (i=2; i*i<=n; i++) {
     if (n % i == 0) {
       return 0;
     }

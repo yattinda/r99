@@ -108,3 +108,32 @@ int main(void){
   }
   return 0;
 }
+
+//100
+int is_prime(int n) {
+  int i;
+  for (i=2; i*i<=n; i++) {
+    if (n % i == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
+//2^16から一つづつ減らしてそれぞれis_primeで判定して素数が見つかるまで繰り返した
+int u_216(void){
+  int set_num = 2;
+  int i, j;
+  for(i=1; i<16; i++){
+    set_num *= 2;
+  }
+  for(j=set_num; ; j--){
+    if(is_prime(j) == 1){
+      return j;
+      break;
+    }
+  }
+}
+
+int main(void){
+  printf("%i", u_216());
+}

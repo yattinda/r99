@@ -71,7 +71,7 @@ int str_search(char* s1, char* s2) {
 int str_len(char* s) {
   int total;
   for(total=0; s[total]!='\0'; total++) {
-    total++;
+    ;
   }
   return total;
 }
@@ -147,7 +147,7 @@ void str_copy(char* s1, char* s2){
 int str_len(char* s) {
   int total;
   for(total=0; s[total]!='\0'; total++) {
-    total++;
+    ;
   }
   return total;
 }

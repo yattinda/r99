@@ -19,6 +19,7 @@ int str_eql(char* s1, char* s2){
   }
 }
 
+//str_eqlを用いてそれぞれ条件分岐させた
 void greet(char* s){
   char *corona = "コロナ";
   char *beer = "ビール";
@@ -78,11 +79,20 @@ int main(void){
 }
 
 //98
+int my_rand(int n) {
+  return (int)(random() % n);
+}
+
+//まず配列に1からn-1まで順に値を代入し、配列の0番目から一つづつランダムに他の要素と入れ替えた
 int* shuffle(int n) {
+  int i, j, tmp, set_num;
   int* a = (int*)malloc(sizeof(int) * n);
-  int i, j, tmp;
+  for(set_num=0; set_num<n; set_num++){
+    a[set_num] = set_num;
+  }
+
   for(i=0; i<n; i++) {
-    j = rand() % n;
+    j = my_rand(n) % n;
     tmp = a[i];
     a[i] = a[j];
     a[j] = tmp;

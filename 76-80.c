@@ -84,7 +84,7 @@ int str_len(char* s) {
 }
 
 int main(void) {
-  char s[50] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+  char s[50] = "123456";
   printf("%s %i \n", s, str_len(s));
   return 0;
 }
